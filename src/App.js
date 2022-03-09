@@ -1,6 +1,6 @@
+// import {Route, Switch, useHistory} from 'react-router-dom'
 import {Route, Switch} from 'react-router-dom'
 // import { useState, useEffect} from 'react'
-import "./App.scss";
 import { About } from "./components/About";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -9,11 +9,12 @@ import { Missing } from "./components/Missing";
 import { Nav } from "./components/Nav";
 import { NewPost } from "./components/NewPosr";
 import { PostPage } from "./components/PostPage";
+import "./App.scss";
 
 function App() {
   return (
   <div className="App">
-    <Header />
+    <Header title="React JS Blog" />
     <Nav />
     <Switch>
       <Route exact path="/" ><Home /></Route>
