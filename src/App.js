@@ -1,7 +1,6 @@
-// import {Route, Switch, useHistory} from 'react-router-dom'
-import {Route, Switch} from 'react-router-dom'
-// import { useState, useEffect} from 'react'
-import { useState} from 'react'
+import {Route, Switch, useHistory} from 'react-router-dom'
+// import {Route, Switch} from 'react-router-dom'
+import { useState, useEffect} from 'react'
 import { About } from "./components/About";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -14,8 +13,7 @@ import "./App.scss";
 
 //! 5:12
 function App() {
-  // const [posts, setPosts] = useState([
-  const [posts] = useState([
+  const [posts, setPosts] = useState([
     {
       id: 1,
       title: "My First Post",
@@ -42,7 +40,11 @@ function App() {
     }
   ])
 const [search, setSearch]= useState('')
-// const [searchResults, setSearchResults]= useState([])
+const [searchResults, setSearchResults]= useState([])
+
+const handleDelete= (id) => {
+
+}
 
   return (
   <div className="App">
@@ -56,7 +58,7 @@ const [search, setSearch]= useState('')
         <NewPost />
         </Route>
       <Route path="/post/:id">
-        <PostPage />
+        <PostPage posts={posts} handleDelete={handleDelete} />
         </Route>
       <Route path="/about" component={About} />
       <Route path="*" component={Missing} />
