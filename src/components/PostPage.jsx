@@ -1,4 +1,5 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+// import { useParams, Link } from "react-router-dom";
 
 export const PostPage = ({ posts, handleDelete }) => {
   const { id } = useParams();
