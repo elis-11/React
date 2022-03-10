@@ -7,7 +7,7 @@ import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 import { Missing } from "./components/Missing";
 import { Nav } from "./components/Nav";
-import { NewPost } from "./components/NewPosr";
+import { NewPost } from "./components/NewPost";
 import { PostPage } from "./components/PostPage";
 import "./App.scss";
 
@@ -41,12 +41,16 @@ function App() {
   ]);
   const [search, setSearch] = useState("");
   // const [searchResults, setSearchResults] = useState([]);
-  const history= useHistory()
+  const [postTitle, setPostTitle] = useState("");
+  const [postBody, setPostBody] = useState("");
+  const history = useHistory();
+
+  const handleSubmit = () => {};
 
   const handleDelete = (id) => {
-    const postsList = posts.filter(post => post.id !== id);
+    const postsList = posts.filter((post) => post.id !== id);
     setPosts(postsList);
-    history.push('/')
+    history.push("/");
   };
 
   return (
@@ -58,7 +62,13 @@ function App() {
           <Home posts={posts} />
         </Route>
         <Route exact path="/post">
-          <NewPost />
+          <NewPost
+            handleSubmit={handleSubmit}
+            postTitle={postTitle}
+            setPostTitle={setPostTitle}
+            postBody={postBody}
+            setPostBody={setPostBody}
+          />
         </Route>
         <Route path="/post/:id">
           <PostPage posts={posts} handleDelete={handleDelete} />

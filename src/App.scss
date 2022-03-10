@@ -10,7 +10,7 @@
   box-shadow: 0px 0px 15px gray;
   color: rgb(41, 40, 40);
 
-  .Header{
+  .Header {
     width: 100%;
     background-color: #c4c3c3;
     padding: 1rem;
@@ -25,19 +25,17 @@
     svg {
       font-size: 2rem;
     }
-
   }
-    Footer {
-      width: 100%;
-      padding: 0.75rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #c4c3c3;
-      a{
+  Footer {
+    width: 100%;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c4c3c3;
+    a {
       color: rgb(85, 83, 83);
-
-      }
+    }
   }
   .Nav {
     width: 100%;
@@ -126,17 +124,15 @@
   }
 
   .Home {
-  
-  .post a {
-    text-decoration: none;
-  }
+    .post a {
+      text-decoration: none;
+    }
 
-  .post a,
-  .post a:visited {
-    color: rgb(58, 57, 57);
-
+    .post a,
+    .post a:visited {
+      color: rgb(58, 57, 57);
+    }
   }
-}
 
   .post:first-child {
     margin-top: 0;
@@ -156,16 +152,16 @@
   }
 
   .newPostForm {
-    display: flex;
+    display: block;
     flex-direction: column;
   }
 
-  .newPostForm label {
+  label {
     margin-top: 1rem;
   }
 
-  .newPostForm input[type="text"],
-  .newPostForm textarea {
+  input[type="text"],
+  textarea {
     font-family: "Open Sans", sans-serif;
     width: 100%;
     min-height: 48px;
@@ -176,11 +172,11 @@
     outline: none;
   }
 
-  .newPostForm textarea {
+  textarea {
     height: 100px;
   }
 
-  .newPostForm button {
+  button {
     margin-top: 1rem;
     height: 48px;
     min-width: 48px;

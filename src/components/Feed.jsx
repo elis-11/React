@@ -1,5 +1,5 @@
-import React from "react";
 import { Post } from "./Post";
+import '../App.scss';
 
 export const Feed = ({ posts }) => {
   return (
