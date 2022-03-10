@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
 export const About = () => {
   return (
-   <main>
-     <h2>About</h2>
-   </main>
-  )
-}
+    <main className="About">
+      <h2>About</h2>
+      <p style={{ marginTop: "1rem" }}>
+        Tralala
+        Tralala
+        Tralala
+      </p>
+    </main>
+  );
+};

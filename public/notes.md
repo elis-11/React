@@ -1,5 +1,5 @@
 - code .bashrc
-# ELISA'S SETTINGS !!!
+### ELISA'S SETTINGS !!!
 - alias ga='git add .'
 - alias gc='git commit -m'
 - alias gu='git commit -m "Update doc."'
@@ -13,3 +13,9 @@
 ---
 - installing DATE
 - npm i date-fns -S
+---
+- RESOURSES
+
+### https://www.youtube.com/watch?v=RVFAyFWO4go&list=LL&index=125&t=1033s
+
+### https://github.com/gitdagray/react_resources
