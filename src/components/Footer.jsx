@@ -1,9 +1,10 @@
 import React from 'react'
+import '../App.scss';
 
 export const Footer = () => {
   return (
    <footer>
-     <h2>Footer</h2>
+     <a href="https://elis-new.netlify.app/">https://elis-new.netlify.app/</a>
    </footer>
   )
 }

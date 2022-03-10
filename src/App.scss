@@ -8,196 +8,209 @@
   align-items: center;
   border: 1px solid #333;
   box-shadow: 0px 0px 15px gray;
-}
+  color: rgb(41, 40, 40);
 
-.Header,
-.Footer {
-  width: 100%;
-  background-color: #66d8f5;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .Header{
+    width: 100%;
+    background-color: #c4c3c3;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  .Header h1 {
-    font-size: 1.5rem;
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    svg {
+      font-size: 2rem;
+    }
+
+  }
+    Footer {
+      width: 100%;
+      padding: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #c4c3c3;
+      a{
+      color: rgb(85, 83, 83);
+
+      }
+  }
+  .Nav {
+    width: 100%;
+    background-color: #d6d1d1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
-  .Header svg {
-    font-size: 2rem;
+  .searchForm {
+    width: 80%;
+    padding: 1rem 0 0 0.75rem;
+
+    input[type="text"] {
+      font-family: "Open Sans", sans-serif;
+      width: 100%;
+      min-height: 48px;
+      font-size: 1rem;
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+      outline: none;
+    }
+
+    label {
+      position: absolute;
+      left: -99999px;
+    }
   }
 
-  .Footer {
-    padding: 0.75rem;
-    display: grid;
-    place-content: center;
+  .Nav {
+    ul {
+      color: rgb(124, 123, 123);
+      list-style-type: none;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    li {
+      padding: 1rem;
+    }
+
+    li:hover,
+    li:focus {
+      padding: 1rem;
+    }
+
+    li a {
+      color: rgb(68, 57, 57);
+      text-decoration: none;
+    }
+
+    li:hover,
+    li:focus,
+    li:hover a,
+    li:focus a {
+      // background-color: #eee;
+      color: #333;
+    }
+
+    font-size: 1.3rem;
+    li:hover a,
+    li:focus a {
+      cursor: pointer;
+    }
+  }
+
+  .Home,
+  .NewPost,
+  .PostPage,
+  .About,
+  .Missing {
+    width: 100%;
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: rgb(224, 224, 224);
+    color: rgb(58, 57, 57);
+  }
+
+  .post {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .Home {
+  
+  .post a {
+    text-decoration: none;
+  }
+
+  .post a,
+  .post a:visited {
+    color: rgb(58, 57, 57);
+
   }
 }
-.Nav {
-  width: 100%;
-  background-color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
 
-.searchForm {
-  width: 80%;
-  padding: 1rem 0 0 0.75rem;
+  .post:first-child {
+    margin-top: 0;
+  }
 
-  input[type="text"] {
+  .post:last-child {
+    border-bottom: none;
+  }
+
+  .postDate {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  .postBody {
+    margin: 1rem 0;
+  }
+
+  .newPostForm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .newPostForm label {
+    margin-top: 1rem;
+  }
+
+  .newPostForm input[type="text"],
+  .newPostForm textarea {
     font-family: "Open Sans", sans-serif;
     width: 100%;
     min-height: 48px;
     font-size: 1rem;
     padding: 0.25rem;
     border-radius: 0.25rem;
+    margin-right: 0.25rem;
     outline: none;
   }
 
-  label {
-    position: absolute;
-    left: -99999px;
-  }
-}
-
-.Nav {
-  ul {
-    color: #fff;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+  .newPostForm textarea {
+    height: 100px;
   }
 
-  li {
-    padding: 1rem;
-  }
-
-  li:hover,
-  li:focus {
-    padding: 1rem;
-  }
-
-  li a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  li:hover,
-  li:focus,
-  li:hover a,
-  li:focus a {
-    background-color: #eee;
-    color: #333;
-  }
-
-  li:hover a,
-  li:focus a {
+  .newPostForm button {
+    margin-top: 1rem;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1rem;
     cursor: pointer;
   }
-}
 
-.Home,
-.NewPost,
-.PostPage,
-.About,
-.Missing {
-  width: 100%;
-  flex-grow: 1;
-  padding: 1rem;
-  overflow-y: auto;
-  background-color: #fff;
-}
+  .Missing h2,
+  .PostPage h2,
+  .Missing p,
+  .PostPage p {
+    margin-bottom: 1rem;
+  }
 
-.post {
-  margin-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid lightgray;
-}
+  .PostPage button {
+    height: 48px;
+    min-width: 48px;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+  }
 
-.Home .post a {
-  text-decoration: none;
-}
-
-.Home .post a,
-.Home .post a:visited {
-  color: #000;
-}
-
-.post:first-child {
-  margin-top: 0;
-}
-
-.post:last-child {
-  border-bottom: none;
-}
-
-.postDate {
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
-}
-
-.postBody {
-  margin: 1rem 0;
-}
-
-.newPostForm {
-  display: flex;
-  flex-direction: column;
-}
-
-.newPostForm label {
-  margin-top: 1rem;
-}
-
-.newPostForm input[type="text"],
-.newPostForm textarea {
-  font-family: "Open Sans", sans-serif;
-  width: 100%;
-  min-height: 48px;
-  font-size: 1rem;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  margin-right: 0.25rem;
-  outline: none;
-}
-
-.newPostForm textarea {
-  height: 100px;
-}
-
-.newPostForm button {
-  margin-top: 1rem;
-  height: 48px;
-  min-width: 48px;
-  border-radius: 10px;
-  padding: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.Missing h2,
-.PostPage h2,
-.Missing p,
-.PostPage p {
-  margin-bottom: 1rem;
-}
-
-.PostPage button {
-  height: 48px;
-  min-width: 48px;
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  font-size: 1rem;
-  background-color: red;
-  color: #fff;
-  cursor: pointer;
-}
-
-.statusMsg {
-  margin-top: 2rem;
+  .statusMsg {
+    margin-top: 2rem;
+  }
 }
 
 @media only screen and (min-width: 610px) {
