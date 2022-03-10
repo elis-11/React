@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import { Feed } from "./Feed";
 
-export const Home = () => {
+export const Home = ({ posts }) => {
   return (
-   <main>
-     <h2>Home</h2>
-   </main>
-  )
-}
+    <main className="Home">
+      {posts.length ? (
+        <Feed posts={posts} />
+      ) : (
+        <p  style={{ marginTop: '2rem' }}>
+          No posts to display.
+          </p>
+      )}
+
+    </main>
+  );
+};
