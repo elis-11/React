@@ -1,6 +1,5 @@
 import { Route, Switch, useHistory } from "react-router-dom";
-import { useState} from 'react'
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { About } from "./components/About";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -9,6 +8,7 @@ import { Missing } from "./components/Missing";
 import { Nav } from "./components/Nav";
 import { NewPost } from "./components/NewPost";
 import { PostPage } from "./components/PostPage";
+import {format} from 'date-fns'
 import "./App.scss";
 
 //! 5:26
@@ -40,12 +40,30 @@ function App() {
     },
   ]);
   const [search, setSearch] = useState("");
-  // const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
   const [postTitle, setPostTitle] = useState("");
   const [postBody, setPostBody] = useState("");
   const history = useHistory();
 
-  const handleSubmit = () => {};
+  useEffect(() => {
+const filteredResults= posts.filter(post => 
+  ((post.body).toLowerCase()).includes(search.toLowerCase())
+  || ((post.title).toLowerCase()).includes(search.toLowerCase()))
+
+  setSearchResults(filteredResults.reverse())
+  }, [posts, search])
+
+  const handleSubmit = (e) => {
+    const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
+    // const datetime = format(new Date(), "yyyy-MM-dd");
+    const datetime = format(new Date(), "MMMM dd, yyyy pp");
+    const newPost= {id, title: postTitle, datetime, body: postBody}
+    const allPosts = [...posts, newPost];
+    setPosts(allPosts);
+    setPostTitle('');
+    setPostBody('');
+    history.push('/');
+  };
 
   const handleDelete = (id) => {
     const postsList = posts.filter((post) => post.id !== id);
@@ -59,7 +77,7 @@ function App() {
       <Nav search={search} setSearch={setSearch} />
       <Switch>
         <Route exact path="/">
-          <Home posts={posts} />
+          <Home posts={searchResults} />
         </Route>
         <Route exact path="/post">
           <NewPost

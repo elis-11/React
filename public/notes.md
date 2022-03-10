@@ -9,3 +9,7 @@
 - alias gs='git status'
 - alias gl='git log'
 - alias gb='git branch'
+
+---
+- installing DATE
+- npm i date-fns -S

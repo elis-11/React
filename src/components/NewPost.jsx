@@ -18,7 +18,7 @@ export const NewPost = ({
           type="text"
           required
           value={postTitle}
-          onChange={(e) => (setPostTitle = e.target.value)}
+          onChange={(e) => setPostTitle(e.target.value)}
           />
           </div>
           <div>
@@ -27,7 +27,7 @@ export const NewPost = ({
           id="postBody"
           required
           value={postBody}
-          onChange={(e) => (setPostBody = e.target.value)}
+          onChange={(e) => setPostBody(e.target.value)}
           />
           </div>
         <button type="submit">Submit</button>
