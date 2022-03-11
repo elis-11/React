@@ -31,16 +31,10 @@
       "body": "not test"
     },
     {
-      "id": 6,
-      "title": "test2",
-      "datetime": "March 11, 2022 4:10:18 PM",
-      "body": "test\n\n\n\n"
-    },
-    {
       "id": 7,
       "title": "heiko",
-      "datetime": "March 11, 2022 6:25:04 PM",
-      "body": "Hello!"
+      "datetime": "March 11, 2022 8:32:24 PM",
+      "body": "Hello!\n"
     }
   ]
 }
