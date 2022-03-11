@@ -5,6 +5,7 @@
 - alias gu='git commit -m "Update doc."'
 - alias gr='git commit -m "Refactoring"'
 - alias gm='git commit -m "Modified doc."'
+- alias gpc='Polished comment'
 - alias gp='git push'
 - alias gs='git status'
 - alias gl='git log'

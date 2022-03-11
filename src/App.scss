@@ -41,13 +41,13 @@
     width: 100%;
     background-color: #d6d1d1;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction:row;
+    justify-content: space-between;
     align-items: flex-start;
   }
 
   .searchForm {
-    width: 80%;
+    width: 50%;
     padding: 1rem 0 0 0.75rem;
 
     input[type="text"] {
@@ -178,6 +178,7 @@
 
   button {
     margin-top: 1rem;
+    width: 100%;
     height: 48px;
     min-width: 48px;
     border-radius: 10px;
@@ -195,6 +196,7 @@
 
   .PostPage button {
     height: 48px;
+    width: 140px;
     min-width: 48px;
     border-radius: 0.25rem;
     padding: 0.5rem;

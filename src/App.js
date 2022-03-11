@@ -11,7 +11,7 @@ import { PostPage } from "./components/PostPage";
 import {format} from 'date-fns'
 import "./App.scss";
 
-//! 5:26
+//! 5:51
 function App() {
   const [posts, setPosts] = useState([
     {
